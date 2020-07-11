@@ -13,7 +13,6 @@
 body{
     background-color: #006FCD;
 }
-.home-header{
-    font-family: 'slim_playregular';
+h1.home-header{
     color: white;
 }
