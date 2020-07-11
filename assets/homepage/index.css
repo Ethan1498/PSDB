@@ -8,11 +8,10 @@
     font-style: normal;
 
 }
-
-
 body{
     background-color: #006FCD;
 }
-h1.home-header{
+.home-header{
     color: white;
+    font-family: 'slim_playregular';
 }
