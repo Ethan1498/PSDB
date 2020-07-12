@@ -29,6 +29,9 @@ html{
 body{
     background-color: #006FCD;
 }
+.margin-top-50{
+    margin-top: 50px;
+}
 .home-header{
     color: white;
     font-family: 'slim_playregular';
