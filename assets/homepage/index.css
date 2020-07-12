@@ -35,6 +35,10 @@ body{
     margin-top: 7px;
 }
 .main-body-content{
+    width: 50%;
+    margin: 0 auto;
+}
+.margin-top-150{
     margin-top: 150px;
 }
 .game-titles{
@@ -49,6 +53,7 @@ body{
     width: 145px;
     text-align: center;
     background: black;
+    max-height: 237px;
     margin: 0 auto;
     color: white;
 }
