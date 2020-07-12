@@ -8,6 +8,20 @@
     font-style: normal;
 
 }
+@font-face {
+    font-family: 'open_sans_reg';
+    src: url('/assets/fonts/OpenSans-Regular.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'open_sans_bold';
+    src: url('/assets/fonts/OpenSans-Bold.ttf') format('ttf');
+    font-weight: bold;
+    font-style: normal;
+}
+
+
 html{
     overflow-x: hidden;
 }
@@ -21,6 +35,9 @@ body{
 }
 .main-body-content{
     margin-top: 150px;
+}
+.game-titles{
+    font-family: 'open_sans_reg';
 }
 .game-card{
     text-align: center;
