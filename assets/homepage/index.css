@@ -6,18 +6,19 @@
          url('/assets/fonts/slimplay-d1gr-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-
 }
 @font-face {
-    font-family: 'open_sans_reg';
-    src: url('/assets/fonts/OpenSans-Regular.ttf') format('ttf');
+    font-family: 'open_sansregular';
+    src: url('opensans-regular-webfont.woff2') format('woff2'),
+         url('opensans-regular-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 @font-face {
-    font-family: 'open_sans_bold';
-    src: url('/assets/fonts/OpenSans-Bold.ttf') format('ttf');
-    font-weight: bold;
+    font-family: 'open_sansbold';
+    src: url('opensans-bold-webfont.woff2') format('woff2'),
+         url('opensans-bold-webfont.woff') format('woff');
+    font-weight: normal;
     font-style: normal;
 }
 
@@ -37,7 +38,7 @@ body{
     margin-top: 150px;
 }
 .game-titles{
-    font-family: 'open_sans_reg';
+    font-family: 'open_sansregular';
 }
 .game-card{
     text-align: center;
