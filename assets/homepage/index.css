@@ -19,6 +19,12 @@ body{
     font-family: 'slim_playregular';
     margin-top: 7px;
 }
+.main-body-content{
+    margin-top: 150px;
+}
+.game-card{
+    text-align: center;
+}
 .black-bg{
     background-color: black;
 }
