@@ -39,9 +39,18 @@ body{
 }
 .game-titles{
     font-family: 'open_sansregular';
+    font-size: .9rem;
+    padding: 25px;
+}
+.game-image{
+    width: 145px;
 }
 .game-card{
+    width: 145px;
     text-align: center;
+    background: black;
+    margin: 0 auto;
+    color: white;
 }
 .black-bg{
     background-color: black;
