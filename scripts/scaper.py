@@ -9,4 +9,4 @@ soup = BeautifulSoup(page.content, 'html.parser')
 
 results = soup.find(id='ember1151')
 
-print (content)
+print (results)
