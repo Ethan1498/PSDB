@@ -27,7 +27,7 @@ html{
     overflow-x: hidden;
 }
 body{
-    background-color: #006FCD;
+    background: linear-gradient(to right, #00213D, #006FCD, #00213D);
 }
 .margin-top-50{
     margin-top: 50px;
@@ -80,6 +80,41 @@ body{
     color: white;
     text-align: left;
     font-family: 'open_sansregular'
+}
+.favBtn {
+    position: absolute;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    top: 47%;
+    left: 65%;
+    overflow: hidden;
+    transition: transform 1s; /* Added */
+}
+.favBtn::before {
+    transform: rotate(0deg);
+}
+  
+.favBtn::after {
+    transform: rotate(90deg);
+}
+.favBtn::before,
+.favBtn::after {
+  content: '';
+  position: absolute;
+  height: 2px;
+  width: 50%;
+  top: 45%;
+  left: 26%;
+  background: #C6C6C6;
+  transition-property: transform;
+  transition-duration: 1s;
+}
+.favBtn:hover{
+    cursor: pointer;
+}
+.rotate-elem{
+    transform: rotate(135deg);
 }
 .black-bg{
     background-color: black;

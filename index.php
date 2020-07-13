@@ -7,6 +7,7 @@
         <link rel='stylesheet' href="/assets/homepage/index.css">
         <script src='/assets/jquery.js'></script>
         <script src='/assets/bootstrap.js'></script>
+        <script src='/assets/homepage/homepage.js'></script>
     </head>
 <body>
 
@@ -27,6 +28,7 @@
                         <h3 class="game-attr">Bundle</h3>
                         <h3 class="game-cons">PS4</h3>
                         <h2 class="game-price">£54.99</h2>
+                        <span class="favBtn" id="favBtn"><span></span></span>              
                     </div>
                 </div>
             </div>
@@ -40,6 +42,7 @@
                         <h3 class="game-attr">Bundle</h3>
                         <h3 class="game-cons">PS4</h3>
                         <h2 class="game-price">£54.99</h2>
+                        <span class="favBtn" id="favBtn"><span></span></span> 
                     </div>
                 </div>
             </div>
