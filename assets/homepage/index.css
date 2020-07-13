@@ -45,20 +45,36 @@ body{
     margin-top: 150px;
 }
 .game-titles{
-    font-family: 'open_sansregular';
-    font-size: .9rem;
-    padding: 25px;
+    font-size: .7rem;
+    padding: 5px;
+    margin-bottom: 40px;
+}
+.game-attr{
+    font-size: .7rem;
+    padding-left: 5px;
+    color: #7F7F7F;
+    margin-bottom: 4px;
+}
+.game-price{
+    position: relative;
+    font-size: .8rem;
+    color: #C6C6C6;
+    background-color: #3D3D3D;
+    padding: 5px;
 }
 .game-image{
-    width: 145px;
+    width: 130px;
 }
 .game-card{
-    width: 145px;
+    width: 130px;
+    height: 310px;    
     text-align: center;
-    background: black;
+    background: #232323;
     max-height: 237px;
     margin: 0 auto;
     color: white;
+    text-align: left;
+    font-family: 'open_sansregular'
 }
 .black-bg{
     background-color: black;
