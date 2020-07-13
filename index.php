@@ -25,7 +25,7 @@
                     <div class="col-12">
                         <h3 class="game-titles">Ghosts Of Tsushima</h3>
                         <h3 class="game-attr">Bundle</h3>
-                        <h3 class="game-attr">PS4</h3>
+                        <h3 class="game-cons">PS4</h3>
                         <h2 class="game-price">£54.99</h2>
                     </div>
                 </div>
@@ -38,7 +38,7 @@
                     <div class="col-12">
                         <h3 class="game-titles">Tony Hawk's™ Pro Skater™ 1 + 2</h3>
                         <h3 class="game-attr">Bundle</h3>
-                        <h3 class="game-attr">PS4</h3>
+                        <h3 class="game-cons">PS4</h3>
                         <h2 class="game-price">£54.99</h2>
                     </div>
                 </div>
@@ -51,7 +51,7 @@
                     <div class="col-12">
                         <h3 class="game-titles">Marvel's Avengers</h3>
                         <h3 class="game-attr">Bundle</h3>
-                        <h3 class="game-attr">PS4</h3>
+                        <h3 class="game-cons">PS4</h3>
                         <h2 class="game-price">£54.99</h2>
                     </div>
                 </div>
@@ -64,7 +64,7 @@
                     <div class="col-12">
                         <h3 class="game-titles">Cyberpunk 2077</h3>
                         <h3 class="game-attr">Bundle</h3>
-                        <h3 class="game-attr">PS4</h3>
+                        <h3 class="game-cons">PS4</h3>
                         <h2 class="game-price">£54.99</h2>
                     </div>
                 </div>
@@ -79,7 +79,7 @@
                     <div class="col-12">
                         <h3 class="game-titles">Ratchet and Clank™: Tools of Destruction</h3>
                         <h3 class="game-attr">Bundle</h3>
-                        <h3 class="game-attr">PS4</h3>
+                        <h3 class="game-cons">PS4</h3>
                         <h2 class="game-price">£54.99</h2>
                     </div>
                 </div>
@@ -92,7 +92,7 @@
                     <div class="col-12">
                         <h3 class="game-titles">The Last of Us™ Remastered</h3>
                         <h3 class="game-attr">Bundle</h3>
-                        <h3 class="game-attr">PS4</h3>
+                        <h3 class="game-cons">PS4</h3>
                         <h2 class="game-price">£54.99</h2>
                     </div>
                 </div>
@@ -105,7 +105,7 @@
                     <div class="col-12">
                         <h3 class="game-titles">Until Dawn™</h3>
                         <h3 class="game-attr">Bundle</h3>
-                        <h3 class="game-attr">PS4</h3>
+                        <h3 class="game-cons">PS4</h3>
                         <h2 class="game-price">£54.99</h2>
                     </div>
                 </div>
@@ -118,7 +118,7 @@
                     <div class="col-12">
                         <h3 class="game-titles">Call of Duty®: Black Ops™ Gold Edition</h3>
                         <h3 class="game-attr">Bundle</h3>
-                        <h3 class="game-attr">PS4</h3>
+                        <h3 class="game-cons">PS4</h3>
                         <h2 class="game-price">£54.99</h2>
                     </div>
                 </div>
