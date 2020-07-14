@@ -122,3 +122,6 @@ body{
 .footer-header{
     color: white;
 }
+.rotate {
+    transform: rotate(135deg);
+}
