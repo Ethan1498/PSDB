@@ -28,7 +28,7 @@
                         <h3 class="game-attr">Bundle</h3>
                         <h3 class="game-cons">PS4</h3>
                         <h2 class="game-price">£54.99</h2>
-                        <span class="favBtn" id="favBtn"><span></span></span>              
+                        <span class="favBtn"><span></span></span>              
                     </div>
                 </div>
             </div>
@@ -42,7 +42,7 @@
                         <h3 class="game-attr">Bundle</h3>
                         <h3 class="game-cons">PS4</h3>
                         <h2 class="game-price">£54.99</h2>
-                        <span class="favBtn" id="favBtn"><span></span></span> 
+                        <span class="favBtn"><span></span></span> 
                     </div>
                 </div>
             </div>
@@ -56,6 +56,7 @@
                         <h3 class="game-attr">Bundle</h3>
                         <h3 class="game-cons">PS4</h3>
                         <h2 class="game-price">£54.99</h2>
+                        <span class="favBtn"><span></span></span>  
                     </div>
                 </div>
             </div>
@@ -69,6 +70,7 @@
                         <h3 class="game-attr">Bundle</h3>
                         <h3 class="game-cons">PS4</h3>
                         <h2 class="game-price">£54.99</h2>
+                        <span class="favBtn"><span></span></span>  
                     </div>
                 </div>
             </div>
@@ -84,6 +86,7 @@
                         <h3 class="game-attr">Bundle</h3>
                         <h3 class="game-cons">PS4</h3>
                         <h2 class="game-price">£54.99</h2>
+                        <span class="favBtn"><span></span></span>  
                     </div>
                 </div>
             </div>
@@ -97,6 +100,7 @@
                         <h3 class="game-attr">Bundle</h3>
                         <h3 class="game-cons">PS4</h3>
                         <h2 class="game-price">£54.99</h2>
+                        <span class="favBtn"><span></span></span>  
                     </div>
                 </div>
             </div>
@@ -110,6 +114,7 @@
                         <h3 class="game-attr">Bundle</h3>
                         <h3 class="game-cons">PS4</h3>
                         <h2 class="game-price">£54.99</h2>
+                        <span class="favBtn"><span></span></span>  
                     </div>
                 </div>
             </div>
@@ -123,6 +128,7 @@
                         <h3 class="game-attr">Bundle</h3>
                         <h3 class="game-cons">PS4</h3>
                         <h2 class="game-price">£54.99</h2>
+                        <span class="favBtn"><span></span></span>  
                     </div>
                 </div>
             </div>
