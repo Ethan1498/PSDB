@@ -13,8 +13,33 @@
 
 <div class="row text-center black-bg">
     <div class="col-12">
-        <h1 class="home-header">PSDB</h1>
+        <div id="navtop">
+            <div class="row">
+                <div class="col-5">
+                    <a href="index.php">Home</a>
+                    <a href="#" id="consoles">Games &#8615</a>
+                    <a href="#">Deals</a>
+                </div>
+                <div class="col-2">
+                    <a href="#cons-list" class="home-header">PSDB</a>
+                </div>
+                <div class="col-5">
+                    <a href="#">Wish List</a>
+                    <a href="#">Placeholder</a>
+                    <a href="#">Log In</a>
+                </div>
+            </div>
+        </div>
     </div>
+</div>
+
+<div id="cons-list" class="text-center hide black-bg">
+    <ul>
+        <li>PS4</li>
+        <li>PS3</li>
+        <li>PS2</li>
+        <li>PS1</li>
+    </ul>
 </div>
 
 <section class="main-body-content margin-top-150">
