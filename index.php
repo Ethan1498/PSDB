@@ -17,11 +17,20 @@
             <div class="row">
                 <div class="col-5">
                     <a href="index.php">Home</a>
-                    <a href="#" id="consoles">Games &#8615</a>
+                    <div class="consoles">Games &#8615
+                        <div class="col-12 text-center black-bg cons-list">
+                            <ul>
+                                <li><a href="#">PS4</a></li>                        
+                                <li><a href="#">PS3</a></li>
+                                <li><a href="#">PS2</a></li>                        
+                                <li><a href="#">PS1</a></li>                                                 
+                            </ul>                        
+                        </div>
+                    </div>
                     <a href="#">Deals</a>
                 </div>
                 <div class="col-2">
-                    <a href="#cons-list" class="home-header">PSDB</a>
+                    <a href="#" class="home-header">PSDB</a>
                 </div>
                 <div class="col-5">
                     <a href="#">Wish List</a>
@@ -33,14 +42,7 @@
     </div>
 </div>
 
-<div id="cons-list" class="text-center hide black-bg">
-    <ul>
-        <li>PS4</li>
-        <li>PS3</li>
-        <li>PS2</li>
-        <li>PS1</li>
-    </ul>
-</div>
+                                                    
 
 <section class="main-body-content margin-top-150">
     <div class="row">
