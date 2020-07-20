@@ -157,12 +157,12 @@ body{
 .consoles:hover .cons-list{
     display: block;
 }
-ul{
+#navtop ul{
     list-style-type: none;
     margin: 0;  
     padding: 0;
 }
-li{
+#navtop li{
     height: 40px;
     margin: 0;
     margin-left: -15px;
@@ -170,10 +170,26 @@ li{
     padding-top: 5px;
     width: 100px;
 }
-li a{
+#navtop li a{
     margin: 0;
     padding: 15px 0;
 }
-li:hover{
+#navtop li:hover{
     background-color: #3D3D3D;
+}
+.pagination{
+    position: relative;
+    top: 100px;
+    width: 300px;
+    text-align: center;
+    list-style-type: none;
+    margin: 0;  
+    padding: 0;
+    background: #232323;
+}
+
+.pagination li{
+    color: white;
+    width: 1fr;
+    padding: 15px;
 }
