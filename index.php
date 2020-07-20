@@ -1,4 +1,4 @@
-<?php include "/scripts/pagination.php"; ?>
+<?php include "scripts/pagination.php"; ?>
 
 <html lang='en'>
 	<head>
