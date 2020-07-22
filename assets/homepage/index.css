@@ -27,7 +27,7 @@ html{
     overflow-x: hidden;
 }
 body{
-    background: linear-gradient(to right, #00213D, #006FCD, #00213D);
+    background-color: #0e6cc4;
 }
 .margin-top-50{
     margin-top: 50px;

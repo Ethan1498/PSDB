@@ -1,6 +1,7 @@
 
 <//?php include "scripts/pagination.php";?>
 <?php include "sources/head.php"; ?>
+<link rel='stylesheet' href="/assets/homepage/background.css">
 <?php include "sources/nav.php";?>
 <?php include "sources/games.php";?>
 <div class="row">
