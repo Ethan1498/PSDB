@@ -16,7 +16,7 @@
                                         echo "<h3 class="."game-titles".">".$row["title"]."</h3>";
                                         echo "<h3 class="."game-attr".">Bundle</h3>";
                                         echo "<h3 class="."game-cons".">PS4</h3>";
-                                        echo "<h2 class="."game-price".">".$row["price"]."</h2>";
+                                        echo "<h2 class="."game-price".">"."£".$row["price"]."</h2>";
                                         echo "<span class="."favBtn"."></span> ";
                                     echo "</div>";
                                 echo "</div>";
