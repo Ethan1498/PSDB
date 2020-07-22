@@ -10,3 +10,8 @@
         <script src='/assets/homepage/homepage.js'></script>
     </head>
     <body>
+        <div class='box'>
+            <div class='wave -one'></div>
+            <div class='wave -two'></div>
+            <div class='wave -three'></div>
+        </div>
