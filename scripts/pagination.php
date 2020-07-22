@@ -1,16 +1,19 @@
 <?php
+    $host = "local.psdb.co.uk";
+    $user = "root";
+    $password = "YP!lgrim2501";
+    $database = "psdb";
+
     if (isset($_GET['pageno'])) {
         $pageno = $_GET['pageno'];
     } else {
         $pageno = 1;
     }
 
-    print $pageno;
-
     $no_of_records_per_page = 12;
     $offset = ($pageno-1) * $no_of_records_per_page;
 
-    $conn=mysqli_connect("local.psdb.co.uk","root","YP!lgrim2501","psdb");
+    $conn=mysqli_connect($host,$user,$password,$database);
 
     if (mysqli_connect_errno()){
         echo "Failed to connect to MySQL: " . mysqli_connect_error();

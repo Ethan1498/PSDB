@@ -183,13 +183,17 @@ body{
     width: 300px;
     text-align: center;
     list-style-type: none;
-    margin: 0;  
+    margin: 0 auto;  
     padding: 0;
     background: #232323;
 }
 
 .pagination li{
+    margin: auto;
     color: white;
     width: 1fr;
     padding: 15px;
+}
+.hidden{
+    display: block;
 }
