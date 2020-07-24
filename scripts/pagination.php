@@ -1,8 +1,8 @@
 <?php
-    $host = "local.psdb.co.uk";
-    $user = "root";
-    $password = "YP!lgrim2501";
-    $database = "game";
+    $host = "local_url";
+    $user = "local_usr";
+    $password = "sql_pass";
+    $database = "db_name";
 
     if (isset($_GET['pageno'])) {
         $pageno = $_GET['pageno'];
