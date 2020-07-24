@@ -3,7 +3,7 @@
         <div id="navtop">
             <div class="row">
                 <div class="col-5">
-                    <a href="index.php">Home</a>
+                    <a href="/">Home</a>
                     <div class="consoles">Games &#8595;
                         <div class="col-12 text-center black-bg cons-list">
                             <ul>

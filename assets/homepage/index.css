@@ -210,3 +210,10 @@ body{
 .hidden{
     display: none;
 }
+.title-link{
+    color: white;
+}
+.title-link:hover{
+    color: white;
+    text-decoration: none;
+}

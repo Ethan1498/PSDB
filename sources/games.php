@@ -11,7 +11,7 @@
                             echo "<img class="."game-image"." src="."/assets/images/ratchet.jpeg".">";
                             echo "<div class="."row".">";
                                 echo "<div class="."col-12".">";
-                                    echo "<h3 class="."game-titles".">".$row["title"]."</h3>";
+                                    echo "<h3 class="."game-titles".">"."<a class="."title-link"." href="."?ID=".$row["id"].">".$row["title"]."</a>"."</h3>";
                                     echo "<h3 class="."game-attr".">Bundle</h3>";
                                     echo "<h3 class="."game-cons".">PS4</h3>";
                                     echo "<h2 class="."game-price".">"."£".$row["price"]."</h2>";
