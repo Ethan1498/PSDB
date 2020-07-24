@@ -186,13 +186,26 @@ body{
     margin: 0 auto;  
     padding: 0;
     background: #232323;
+    border-radius: 5px;
 }
-
-.pagination li{
+.pagination:hover{
+    box-shadow: 1px 2px black;
+}
+.pagenum{
     margin: auto;
-    color: white;
-    width: 1fr;
+    width: 100%;
     padding: 15px;
+}
+.pagenum:hover{
+    background-color: #3D3D3D; 
+    border-radius: 5px;
+}
+.page{
+    color: white;
+}
+.page:hover{
+    text-decoration: none;
+    color: white;
 }
 .hidden{
     display: none;
