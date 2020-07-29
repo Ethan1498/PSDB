@@ -11,7 +11,7 @@
                             echo "<img class="."game-image"." src=".$row["image"].">";
                             echo "<div class="."row".">";
                                 echo "<div class="."col-12".">";
-                                    echo "<h3 class="."game-titles".">"."<a class="."title-link"." href="."/ps4"."?id=".$row["id"].">".$row["title"]."</a>"."</h3>";
+                                    echo "<h3 class="."game-titles".">"."<a class="."title-link"." href="."/ps4"."/".$row["id"].">".$row["title"]."</a>"."</h3>";
                                     echo "<h3 class="."game-attr".">Bundle</h3>";
                                     echo "<h3 class="."game-cons".">PS4</h3>";
                                     echo "<h2 class="."game-price".">"."£".$row["price"]."</h2>";

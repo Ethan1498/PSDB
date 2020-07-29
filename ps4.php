@@ -1,17 +1,20 @@
-<?php include "scripts/pagination.php";?>
+<?php include "scripts/connect.php";?>
 <?php include "sources/head.php"; ?>
 <?php include "sources/nav.php";?>
 
 <?php 
     $id = $_GET["id"];
-    $conn = mysqli_connect($host,$user,$password,$database);
-    $sql = "SELECT * FROM games WHERE id = $id";
-    $result = mysqli_query($conn,$sql);
-    while($row = mysqli_fetch_assoc($result)){
-        echo $row["title"]; 
-        echo "<br>";
-        echo "£".$row["price"]." ";   
-    }
+    $url = "http://local.psdb.co.uk/api/".$id;
+
+    $client = curl_init($url);
+    curl_setopt($client,CURLOPT_RETURNTRANSFER,true);
+    $response = curl_exec($client);
+
+    $result = json_decode($response, true);
+
+    echo $result["title"];
+    echo "<br>";
+    echo "£".$result["price"]." "; 
 ?>
 
 
