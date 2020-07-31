@@ -1,14 +1,14 @@
 from bs4 import BeautifulSoup
 import requests
 import csv
-max_page = 3
+max_page = 12
 
-outfile = open('psgames.csv','w', newline='')
+outfile = open('ps4games.csv','w', newline='')
 writer = csv.writer(outfile)
-writer.writerow(["Name", "Price"])
+writer.writerow(["Name", "Image", "Price"])
 
 for i in range (1,max_page):
-  url = f'https://store.playstation.com/en-gb/grid/STORE-MSF75508-FULLGAMES/{i}'
+  url = f'https://store.playstation.com/en-gb/grid/STORE-MSF75508-PS4CAT/{i}'
   page = requests.get(url)
   soup = BeautifulSoup(page.text, 'html.parser')
 
@@ -16,14 +16,15 @@ for i in range (1,max_page):
   for element in paging: 
     alllinks = soup.find_all("a", {"class": "paginator-control__page-number"})
 
-  gameinfo = soup.findAll("div", {"class": "grid-cell__body"})
+  gameinfo = soup.findAll("div", {"class": "grid-cell"})
   for element in gameinfo:
       name = element.find("div",{"class":"grid-cell__title"}).text.strip()
+      # image = element.find("img",{"product-image__img product-image__img--product product-image__img-main"})
+      image = soup.select_one('.product-image__img-main')['src']
+      print (image)
       price = element.find("h3",{"class":"price-display__price"})
       if price is not None:
         price = price.text.strip()
-        print(price)
       else:
         price = ""
-        print(price)
-      writer.writerow([name, price]) 
+      writer.writerow([name, image, price]) 
