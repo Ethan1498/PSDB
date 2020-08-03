@@ -72,6 +72,7 @@ body{
     background: #232323;
     max-height: 237px;
     margin: 0 auto;
+    margin-bottom: 50px;
     color: white;
     text-align: left;
     font-family: 'open_sansregular'
@@ -184,6 +185,7 @@ body{
     text-align: center;
     list-style-type: none;
     margin: 0 auto;  
+    margin-bottom: 100px;
     padding: 0;
     background: #232323;
     border-radius: 5px;
@@ -193,6 +195,7 @@ body{
     -moz-box-shadow: 10px 10px 10px 0px rgba(0,0,0,0.75);
     box-shadow: 10px 10px 10px 0px rgba(0,0,0,0.75);
 }
+
 .pagenum{
     margin: auto;
     width: 100%;

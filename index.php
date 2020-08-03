@@ -1,9 +1,10 @@
-
-<?php include "scripts/pagination.php";?>
 <?php include "sources/head.php"; ?>
 <!-- <link rel='stylesheet' href="/assets/homepage/background.css"> -->
 <?php include "sources/nav.php";?>
+<?php include "scripts/pagination.php";?>
 <?php include "sources/games.php";?>
+
+
 <div class="row">
     <div class="col-12 text-center">
         <ul class="pagination">

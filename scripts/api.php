@@ -7,21 +7,26 @@
         $result = mysqli_query($conn, $sql);
         if (mysqli_num_rows($result)>0){
             $row = mysqli_fetch_array($result);
+            $id = $row["id"];
+            $image = $row["image"];
             $title = $row["title"];
             $price = $row["price"];
-            response($title,$price);
+            response($id,$image,$title,$price);
             mysqli_close($conn);
         } else {
-            response("No Record Found", NULL);
+            response("No Record Found", NULL, NULL, NULL);
             mysqli_close($conn);
         }
     }else{
-        response("Invalid Request", NULL);
+        response("Invalid Request", NULL, NULL, NULL);
     }
 
-    function response($title,$price){
+    function response($id,$image,$title,$price){
+        $response["id"] = $id;
+        $response["image"] = $image;
         $response["title"] = $title;
         $response["price"] = $price;
+        
 
         $json_response = json_encode($response);
         echo $json_response;

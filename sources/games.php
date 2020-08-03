@@ -1,12 +1,12 @@
+<?php include "scripts/connect.php";?>
 <section class="main-body-content margin-top-150">
     <div class="row margin-top-50">
-        <?php 
-            $conn=mysqli_connect($host,$user,$password,$database);
+        <?php             
             $sql = "SELECT * FROM games LIMIT $offset, $no_of_records_per_page";
             $result = mysqli_query($conn,$sql);
             while($row = mysqli_fetch_assoc($result)){
                 if(mysqli_num_rows($result) > 0){                    
-                    echo "<div class="."col-6".">";
+                    echo "<div class="."col-3".">";
                         echo "<div class="."game-card".">";
                             echo "<img class="."game-image"." src=".$row["image"].">";
                             echo "<div class="."row".">";
