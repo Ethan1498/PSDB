@@ -1,6 +1,6 @@
 <?php
     include "connect.php";
-    $no_of_records_per_page = 4;
+    $no_of_records_per_page = 2;
 
     $sql = "SELECT COUNT(*) FROM games";  
     $result = mysqli_query($conn, $sql);  
