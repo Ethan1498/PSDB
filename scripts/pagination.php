@@ -1,30 +1,38 @@
 <?php
     include "connect.php";
+    $no_of_records_per_page = 4;
 
-    if (isset($_GET['pageno'])) {
-        $pageno = $_GET['pageno'];
+    $sql = "SELECT COUNT(*) FROM games";  
+    $result = mysqli_query($conn, $sql);  
+    $row = mysqli_fetch_row($result);  
+    $total_records = $row[0];  
+    $total_pages = ceil($total_records / $no_of_records_per_page); 
+
+    if (isset($_GET['page'])) {
+        $page = $_GET['page'];
     } else {
-        $pageno = 1;
+        $page = 1;
     }
+    $offset = ($page-1) * $no_of_records_per_page;
+    
+    $sql = "SELECT * FROM games LIMIT $offset, $no_of_records_per_page";
+    $result = mysqli_query($conn, $sql);
 
-    $no_of_records_per_page = 2;
-    $offset = ($pageno-1) * $no_of_records_per_page;
-
-    if (mysqli_connect_errno()){
-        echo "Failed to connect to MySQL: " . mysqli_connect_error();
-        die();
+    while($row = mysqli_fetch_array($result)){                                  
+        echo "<div class="."col-3".">";
+            echo "<div class="."game-card".">";
+                echo "<img class="."game-image"." src=".$row["image"].">";
+                echo "<div class="."row".">";
+                    echo "<div class="."col-12".">";
+                        echo "<h3 class="."game-titles".">"."<a class="."title-link"." href="."/ps4"."/".$row["id"].">".$row["title"]."</a>"."</h3>";
+                        echo "<h3 class="."game-attr".">Bundle</h3>";
+                        echo "<h3 class="."game-cons".">PS4</h3>";
+                        echo "<h2 class="."game-price".">"."£".$row["price"]."</h2>";
+                        echo "<span class="."favBtn"."></span> ";
+                    echo "</div>";
+                echo "</div>";
+            echo "</div>";
+        echo "</div>";                    
     }
-
-    $total_pages_sql = "SELECT COUNT(*) FROM games";
-    $result = mysqli_query($conn,$total_pages_sql);
-    $total_rows = mysqli_fetch_array($result)[0];
-    $total_pages = ceil($total_rows / $no_of_records_per_page);
-
-
-    /*$sql = "SELECT * FROM games LIMIT $offset, $no_of_records_per_page";
-    $res_data = mysqli_query($conn,$sql);
-    while($row = mysqli_fetch_array($res_data)){
-        //DATA GOES HERE(?)
-    }*/
-    mysqli_close($conn);
+mysqli_close($conn);
 ?>

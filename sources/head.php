@@ -8,6 +8,7 @@
         <script src='/assets/jquery.js'></script>
         <script src='/assets/bootstrap.js'></script>
         <script src='/assets/homepage/homepage.js'></script>
+        <script src='/scripts/pagination.js'></script>
     </head>
     <body>
         <div class='box'>
