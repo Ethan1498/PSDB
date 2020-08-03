@@ -205,6 +205,24 @@ body{
     background-color: #3D3D3D; 
     border-radius: 5px;
 }
+.pagef{
+    margin: auto;
+    width: 100%;
+    padding: 15px;
+}
+.pagef:hover{
+    background-color: #3D3D3D; 
+    border-radius: 5px;
+}
+.pagel{
+    margin: auto;
+    width: 100%;
+    padding: 15px;
+}
+.pagel:hover{
+    background-color: #3D3D3D; 
+    border-radius: 5px;
+}
 .page{
     color: white;
 }

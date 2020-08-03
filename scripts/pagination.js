@@ -13,8 +13,16 @@ $(document).ready(function() {
             success: function(dataResult){
                 $("#target-content").html(dataResult);
                 $(".pagenum").removeClass("active");
-                $("#"+select_id).addClass("active");
-                
+                $("#"+select_id).addClass("active");                              
+            }
+        });
+        $(".pagenum").each(function(){
+            if ($(this).attr("id") < select_id-2) {
+                $(this).addClass("hidden");
+            }else if ($(this).attr("id") > select_id+2) {
+                $(this).addClass("hidden");
+            }else{
+                $(this).removeClass("hidden");
             }
         });
     });
@@ -49,5 +57,5 @@ $(document).ready(function() {
                 $("#"+select_id).addClass("active");
             }
         }); 
-     });
+    });   
 });
