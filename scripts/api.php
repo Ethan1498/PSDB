@@ -30,7 +30,6 @@
         $response["image"] = $image;
         $response["title"] = $title;
         $response["price"] = $price;
-        $json_response = json_encode($response); //you can just echo this directly rather than storing in a variable
-        echo $json_response;
+        echo json_encode($response);
     }
 ?>
