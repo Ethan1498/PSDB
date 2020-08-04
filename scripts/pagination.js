@@ -1,8 +1,11 @@
 $(document).ready(function() {
     $("#target-content").load("scripts/pagination.php?page=1");
+    
     $(".page").click(function(){
         var id = $(this).attr("data-id");
-        var select_id = $(this).parent().attr("id");
+        var select_id = parseInt($(this).parent().attr("id"));
+        var next = select_id + 1;
+        var prev = select_id - 1;
         $.ajax({
             url: "scripts/pagination.php",
             type: "GET",
@@ -12,23 +15,19 @@ $(document).ready(function() {
             cache: false,
             success: function(dataResult){
                 $("#target-content").html(dataResult);
-                $(".pagenum").removeClass("active");
-                $("#"+select_id).addClass("active");                              
+                $(".pagenum").addClass("hidden");
+                $("#"+select_id).removeClass("hidden");
+                $("#"+next).removeClass("hidden");
+                $("#"+prev).removeClass("hidden");                              
             }
         });
-        $(".pagenum").each(function(){
-            if ($(this).attr("id") < select_id-2) {
-                $(this).addClass("hidden");
-            }else if ($(this).attr("id") > select_id+2) {
-                $(this).addClass("hidden");
-            }else{
-                $(this).removeClass("hidden");
-            }
-        });
+              
     });
     $("#first").click(function(){
-       var select_id = $(this).parent().attr("id");
-       $.ajax({
+        var select_id = parseInt($(this).parent().attr("id"));
+        var page1 = select_id + 1;
+        var page2 = select_id + 2;
+        $.ajax({
            url: "scripts/pagination.php",
            type: "GET",
            data: {
@@ -37,24 +36,29 @@ $(document).ready(function() {
            cache: false,
            success: function(dataResult){
                $("#target-content").html(dataResult);
-               $(".pagenum").removeClass("active");
-               $("#"+select_id).addClass("active");
-           }
-       }); 
+               $(".pagenum").addClass("hidden");
+               $("#"+page1).removeClass("hidden");
+               $("#"+page2).removeClass("hidden");
+            }      
+        });  
+         
     });
     $("#last").click(function(){
-        var select_id = $(this).parent().attr("id");
+        var select_id = parseInt($(this).parent().attr("id"));
+        var page1 = select_id - 1;
+        var page2 = select_id - 2;
         $.ajax({
             url: "scripts/pagination.php",
             type: "GET",
             data: {
-                page : select_id
+                page : select_id -1
             },
             cache: false,
             success: function(dataResult){
                 $("#target-content").html(dataResult);
-                $(".pagenum").removeClass("active");
-                $("#"+select_id).addClass("active");
+                $(".pagenum").addClass("hidden");
+                $("#"+page1).removeClass("hidden");
+                $("#"+page2).removeClass("hidden");
             }
         }); 
     });   
