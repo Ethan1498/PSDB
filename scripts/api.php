@@ -1,13 +1,12 @@
 <?php 
-    //Suggestions: I would include the time the query takes to complete, it'll let you investigate slow queries and see if your code can be improved in sections
+
     header("Content-Type:application.json");
-    if (isset($_GET["id"]) && !empty($_GET["id"])) { //!empty = not empty, rather than checking directly for ""
+    if (isset($_GET["id"]) && !empty($_GET["id"])) { 
         include "connect.php"; 
         $id = $_GET["id"];
+        $_id = mysqli_real_escape_string($conn, $id);
         
-        //TODO: investigate mysql_real_escape_string() on anything being passed to the database
-        
-        $sql = "SELECT * FROM games WHERE id=$id";
+        $sql = "SELECT * FROM games WHERE id=$_id";
         $result = mysqli_query($conn, $sql);
         if (mysqli_num_rows($result)>0){
             $row = mysqli_fetch_array($result);
@@ -32,4 +31,6 @@
         $response["price"] = $price;
         echo json_encode($response);
     }
+    
+    
 ?>

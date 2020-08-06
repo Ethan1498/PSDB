@@ -1,10 +1,9 @@
-<?php 
-//Open PHP once if using throughout the page, no need to open/close repeatedly
+<?php
 include "scripts/connect.php";
 include "sources/head.php";
 include "sources/nav.php";
 
-
+$starttime = microtime(true);
 if (isset($_GET["id"]) && !empty($_GET["id"])) {
     $id = $_GET["id"];
     $url = "http://local.psdb.co.uk/api/".$id;
@@ -14,12 +13,13 @@ if (isset($_GET["id"]) && !empty($_GET["id"])) {
     $response = curl_exec($client);
     $result = json_decode($response, true);
 
-    //echo once, rather than three times, marginally faster, content can be concatinated together using .
-    echo('<img class="game-image" src="'.$result["image"].'"></img><br>'.$result["title"]."<br>£".$result["price"]." ");
+    echo('<img class="game-image" src="'.$result["image"].'"></img><br>'.$result["title"]."<br>£".$result["price"]);
 }else{
     echo 'No results found';
 }
-
+$endtime = microtime(true);
+$duration = $endtime - $starttime;
+echo '<br>'.$duration;
 
 include "sources/footer.php";
 ?>

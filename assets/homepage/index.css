@@ -230,6 +230,20 @@ body{
     text-decoration: none;
     color: white;
 }
+.page-first{
+    color: white;
+}
+.page-first:hover{
+    text-decoration: none;
+    color: white;
+}
+.page-last{
+    color: white;
+}
+.page-last:hover{
+    text-decoration: none;
+    color: white;
+}
 .hidden{
     display: none;
 }
