@@ -19,7 +19,10 @@ if (isset($_GET["id"]) && !empty($_GET["id"])) {
 }
 $endtime = microtime(true);
 $duration = $endtime - $starttime;
-echo '<br>'.$duration;
+
+if ($duration > 0.01) {
+    echo ('<script type="text/javascript"> alert("Loading...")</script>');
+}
 
 include "sources/footer.php";
 ?>

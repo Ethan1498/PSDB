@@ -14,21 +14,23 @@
             $image = $row["image"];
             $title = $row["title"];
             $price = $row["price"];
-            response($id,$image,$title,$price);
+            $oldPrice = $row["oldPrice"];
+            response($id,$image,$title,$price,$oldPrice);
             mysqli_close($conn);
         } else {
-            response("No Record Found", NULL, NULL, NULL);
+            response("No Record Found", NULL, NULL, NULL, NULL);
             mysqli_close($conn);
         }
     } else {
-        response("Invalid Request", NULL, NULL, NULL);
+        response("Invalid Request", NULL, NULL, NULL, NULL);
     }
 
-    function response($id,$image,$title,$price){
+    function response($id,$image,$title,$price,$oldPrice){
         $response["id"] = $id;
         $response["image"] = $image;
         $response["title"] = $title;
         $response["price"] = $price;
+        $response["oldPrice"] = $oldPrice;
         echo json_encode($response);
     }
     
