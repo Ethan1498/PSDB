@@ -1,3 +1,4 @@
+<script src="../assets/homepage/homepage.js"></script>
 <?php
     $starttime = microtime(true);
     include "connect.php";
