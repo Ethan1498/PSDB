@@ -12,7 +12,7 @@ $sql = "SELECT * FROM games WHERE oldPrice > price";
 $res = mysqli_query($conn, $sql);
 
 while($row = mysqli_fetch_array($res)){    
-    $url = "http://local.psdb.co.uk/api/".$row["id"];
+    $url = "http://local.psdb.co.uk/api/0/".$row["id"];
     
     $client = curl_init($url);
     curl_setopt($client,CURLOPT_RETURNTRANSFER,true);
@@ -39,7 +39,7 @@ while($row = mysqli_fetch_array($res)){
 $endtime = microtime(true);
 $duration = $endtime - $starttime;
 
-if ($duration > 0.05) {
+if ($duration > 0.1) {
     echo ('<script type="text/javascript"> alert("Loading...")</script>');
 }
 

@@ -1,5 +1,4 @@
-<?php 
-        
+<?php         
 header("Content-Type:application.json");
 if (isset($_GET["id"]) && !empty($_GET["id"])) { 
     include "connect.php";
@@ -17,7 +16,8 @@ if (isset($_GET["id"]) && !empty($_GET["id"])) {
         $title = $row["title"];
         $price = $row["price"];
         $oldPrice = $row["oldPrice"];
-        response($id,$image,$title,$price,$oldPrice);
+        $console = $row["console"];
+        response($id,$image,$title,$price,$oldPrice,$console);
         
                         
     } else {
@@ -26,15 +26,10 @@ if (isset($_GET["id"]) && !empty($_GET["id"])) {
 } else {
     response("Invalid Request", NULL, NULL, NULL, NULL);
 }
-    
 
+function response($id,$image,$title,$price,$oldPrice,$console){
     
-
-function response($id,$image,$title,$price,$oldPrice){
-    
-    $arr = array("id"=>$id, "image"=>$image, "title"=>$title, "price"=>$price, "oldPrice"=>$oldPrice);
+    $arr = array("id"=>$id, "image"=>$image, "title"=>$title, "price"=>$price, "oldPrice"=>$oldPrice, "console"=>$console);
     echo json_encode($arr);
-} 
-    
-    
+}     
 ?>

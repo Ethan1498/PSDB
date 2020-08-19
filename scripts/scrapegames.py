@@ -39,7 +39,7 @@ for console in consoles:
             else:
                 price = ""
             
-            sql = f"INSERT INTO {console_name}games(title, price, image) VALUES('{name}', {price}, '{image}')"
+            sql = f"INSERT INTO {console_name}games(title, price, image, console) VALUES('{name}', {price}, '{image}', {console_name})"
             try:
                 cursor.execute(sql)
                 db.commit()   

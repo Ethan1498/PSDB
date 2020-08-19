@@ -1,11 +1,5 @@
 <?php
-include "scripts/connect.php"; 
-$no_of_records_per_page = 2;
-$sql = "SELECT COUNT(*) FROM games";  
-$result = mysqli_query($conn, $sql);  
-$row = mysqli_fetch_row($result);  
-$total_records = $row[0];  
-$total_pages = ceil($total_records / $no_of_records_per_page); 
+include "homepage-settings.php"; 
 ?>
 
 <div class="row">               
