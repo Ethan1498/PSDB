@@ -43,6 +43,7 @@ body{
     position: absolute;
     font-size: .7rem;
     padding: 5px;
+    margin-right: 8px;
 }
 .game-attr{
     position: relative;
@@ -253,4 +254,8 @@ body{
 .title-link:hover{
     color: white;
     text-decoration: none;
+}
+footer{
+    position: relative;
+    top: 200px;
 }

@@ -1,4 +1,4 @@
-<footer class="fixed-bottom text-center black-bg">
+<footer class="footer text-center black-bg">
     <div class="row">
         <div class="col-6">
             <h4>About</h4>

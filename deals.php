@@ -3,8 +3,9 @@ include "scripts/connect.php";
 include "sources/head.php";
 include "sources/nav.php";
 ?>
+<body>
 <section class="main-body-content margin-top-150">
-    <div class="row margin-top-50" >
+    <div class="row margin-top-50">
     
 <?php
 $starttime = microtime(true);
@@ -47,6 +48,7 @@ if ($duration > 0.1) {
 
     </div>   
 </section>
+</body>
 <?php
 include "sources/footer.php";
 ?>
