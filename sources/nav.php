@@ -17,7 +17,7 @@
                     <a href="/deals.php">Deals</a>
                 </div>
                 <div class="col-2">
-                    <a href="#" class="home-header">PSDB</a>
+                    <a href="/" class="home-header">PSDB</a>
                 </div>
                 <div class="col-5">
                     <a href="#">Wish List</a>

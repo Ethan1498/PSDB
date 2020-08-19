@@ -1,16 +1,24 @@
 from bs4 import BeautifulSoup
 import requests
-import csv
-max_page = 7
-consoles = [("ps1", "https://store.playstation.com/en-gb/grid/STORE-MSF75508-RETROPS1/{}"),("ps2", "https://store.playstation.com/en-gb/grid/STORE-MSF75508-DISCOVERPS2ONPS3/{}"),("ps3", "https://store.playstation.com/en-gb/grid/STORE-MSF75508-PLATFORMPS3/{}"),("ps4", "https://store.playstation.com/en-gb/grid/STORE-MSF75508-PS4CAT/{}")]
+import MySQLdb
 
+HOST = "localhost"
+USERNAME = "root"
+PASSWORD = "root"
+DATABASE = "game"
 
+max_page = 2
+consoles = [("ps1", "https://store.playstation.com/en-gb/grid/STORE-MSF75508-RETROPS1/{}"),
+("ps2", "https://store.playstation.com/en-gb/grid/STORE-MSF75508-DISCOVERPS2ONPS3/{}"),
+("ps3", "https://store.playstation.com/en-gb/grid/STORE-MSF75508-PLATFORMPS3/{}"),
+("ps4", "https://store.playstation.com/en-gb/grid/STORE-MSF75508-PS4CAT/{}")]
+
+db = MySQLdb.connect(HOST, USERNAME, PASSWORD, DATABASE)
+cursor = db.cursor()
 for console in consoles:
     console_name = console[0]
     page_url = console[1]
-    outfile = open(f'{console_name}games.csv','w', newline='')
-    writer = csv.writer(outfile)
-    writer.writerow(["Name", "Image", "Price"])
+    
 
     for i in range (1,max_page):
         url = page_url.format(i)
@@ -23,13 +31,32 @@ for console in consoles:
 
         gameinfo = soup.findAll("div", {"class": "grid-cell"})
         for element in gameinfo:
-            name = element.find("div",{"class":"grid-cell__title"}).text.strip()
-            # image = element.find("img",{"product-image__img product-image__img--product product-image__img-main"})
-            image = soup.select_one('.product-image__img-main')['src']
-            print (image)
+            name = str(element.find("div",{"class":"grid-cell__title"}).text.strip())
+            image = element.find("img",{"class":"product-image__img-main"})['src']
             price = element.find("h3",{"class":"price-display__price"})
             if price is not None:
-                price = price.text.strip()
+                price = price.text.strip()[1:]                 
             else:
                 price = ""
-            writer.writerow([name, image, price]) 
+            
+            sql = f"INSERT INTO {console_name}games(title, price, image) VALUES('{name}', {price}, '{image}')"
+            try:
+                cursor.execute(sql)
+                db.commit()   
+            except:                
+                db.rollback()
+            sql = f"UPDATE {console_name}games SET price = {price} WHERE title = '{name}'"
+            try:
+                cursor.execute(sql)
+                db.commit()   
+            except:                
+                db.rollback()
+            sql = "SELECT LAST_INSERT_ID()"
+            try:
+                cursor.execute(sql)
+                result = cursor.fetchone()
+            except:
+                db.rollback()
+                db.close()
+            
+              

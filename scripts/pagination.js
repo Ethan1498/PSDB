@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    $("#target-content").load("scripts/pagination.php?page=1");
+    $("#target-content").load("scripts/pagination-homepage.php?page=1");
     
     $(".page").click(function(){
         var id = $(this).attr("data-id");
@@ -7,7 +7,7 @@ $(document).ready(function() {
         var next = select_id + 1;
         var prev = select_id - 1;
         $.ajax({
-            url: "scripts/pagination.php",
+            url: "scripts/pagination-homepage.php",
             type: "GET",
             data: {
                 page : id
@@ -28,7 +28,7 @@ $(document).ready(function() {
         var page1 = select_id + 1;
         var page2 = select_id + 2;
         $.ajax({
-           url: "scripts/pagination.php",
+           url: "scripts/pagination-homepage.php",
            type: "GET",
            data: {
                page : 1
@@ -48,7 +48,7 @@ $(document).ready(function() {
         var page1 = select_id - 1;
         var page2 = select_id - 2;
         $.ajax({
-            url: "scripts/pagination.php",
+            url: "scripts/pagination-homepage.php",
             type: "GET",
             data: {
                 page : select_id -1
