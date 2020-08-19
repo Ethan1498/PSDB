@@ -7,10 +7,10 @@
                     <div class="consoles">Games &#8595;
                         <div class="col-12 text-center black-bg cons-list">
                             <ul>
-                                <li><a href="#">PS4</a></li>                        
-                                <li><a href="#">PS3</a></li>
-                                <li><a href="#">PS2</a></li>                        
-                                <li><a href="#">PS1</a></li>                                                 
+                                <li><a href="/ps4">PS4</a></li>                        
+                                <li><a href="/ps3">PS3</a></li>
+                                <li><a href="/ps2">PS2</a></li>                        
+                                <li><a href="/ps1">PS1</a></li>                                                 
                             </ul>                        
                         </div>
                     </div>
