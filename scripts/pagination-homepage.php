@@ -56,8 +56,10 @@ if(!$data_for_front_page){
             </div>'; 
         }                
     }
+    //you need to be storing in memcached here, it also needs to be assigned to a variable, currently you access memcached, retrieve whatever is stored, 
+    //if nothing is stored you store "False" in memcached, and if something is stored, you echo out content
 } else {
-    store_in_cache("data_for_front_page", $data_for_front_page, 600);
+    store_in_cache("data_for_front_page", $data_for_front_page, 600); //$data_for_front_page contains nothing here, this else triggers if something is returned from memcached, ie if there's data already stored. 
 }
 
 
