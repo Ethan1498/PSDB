@@ -9,7 +9,6 @@ include "sources/nav.php";
 include "sources/games.php";  
 include "scripts/pagination.php";
 ?>
-<br>
 <?php
 include "sources/footer.php";
 ?>
