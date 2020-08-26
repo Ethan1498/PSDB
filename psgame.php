@@ -1,13 +1,14 @@
 <?php
+$starttime = microtime(true);
 include "scripts/connect.php";
 include "sources/head.php";
 include "sources/nav.php";
 
-$starttime = microtime(true);
+
 if (isset($_GET["id"]) && !empty($_GET["id"])) {
     $id = $_GET["id"];
-    $tab = $_GET["tab"];
-    $url = "http://local.psdb.co.uk/api/".$tab."/".$id;
+    $console = $_GET["c"];
+    $url = 'http://local.psdb.co.uk/scripts/api.php?l=1&c='.$console;
 
     $client = curl_init($url);
     curl_setopt($client,CURLOPT_RETURNTRANSFER,true);
@@ -20,10 +21,6 @@ if (isset($_GET["id"]) && !empty($_GET["id"])) {
 }
 $endtime = microtime(true);
 $duration = $endtime - $starttime;
-
-if ($duration > 0.01) {
-    echo ('<script type="text/javascript"> alert("Loading...")</script>');
-}
-
+echo ('<script type ="text/javascript"> console.log('.$duration.')</script>');
 include "sources/footer.php";
 ?>

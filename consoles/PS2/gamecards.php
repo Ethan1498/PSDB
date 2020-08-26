@@ -20,7 +20,7 @@ foreach ($results as $result){
                 <img class="game-image" src='.$result["image"].'>
                 <div class="row">
                     <div class="col-12">
-                        <h3 class="game-titles"><a class="title-link" href="/psgame/'.$tab.'/'.$result["id"].'">'.$result["title"].'</a></h3>
+                        <h3 class="game-titles"><a class="title-link" href="/psgame/'.$console.'/'.$result["id"].'">'.$result["title"].'</a></h3>
                         <h3 class="game-attr">Game</h3>
                         <h3 class="game-cons">'.$result["console"].'</h3>
                         <h2 class="game-price">£<del>'.$result["oldPrice"].'</del>    £'.$result["price"].'</h2>
@@ -35,7 +35,7 @@ foreach ($results as $result){
                 <img class="game-image" src='.$result["image"].'>
                 <div class="row">
                     <div class="col-12">
-                        <h3 class="game-titles"><a class="title-link" href="/psgame/'.$tab.'/'.$result["id"].'">'.$result["title"].'</a></h3>
+                        <h3 class="game-titles"><a class="title-link" href="/psgame/'.$console.'/'.$result["id"].'">'.$result["title"].'</a></h3>
                         <h3 class="game-attr">Game</h3>
                         <h3 class="game-cons">'.$result["console"].'</h3>
                         <h2 class="game-price">£'.$result["price"].'</h2>

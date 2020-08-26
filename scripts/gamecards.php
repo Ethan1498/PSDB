@@ -1,13 +1,12 @@
-<script src="../../assets/homepage/homepage.js"></script>
+<script src="../assets/homepage/homepage.js"></script>
 <?php
 $starttime = microtime(true);
-include "settings.php";
-
+include "homepage-settings.php";
 if (isset($_GET['page'])) {
     $page = $_GET['page'];
 } else {
     $page = 1;
-}
+}    
 $url = 'http://local.psdb.co.uk/scripts/api.php?l='.$limit.'&p='.$page.'&c='.$console;  
 $client = curl_init($url);
 curl_setopt($client,CURLOPT_RETURNTRANSFER,true);
@@ -48,6 +47,6 @@ foreach ($results as $result){
 }
 $endtime = microtime(true);
 $duration = $endtime - $starttime;
-echo ('<script type ="text/javascript"> console.log('.$duration.')</script>');
+echo ('<script type ="text/javascript"> console.log('.$duration.')</script>');         
 mysqli_close($conn);
 ?>
