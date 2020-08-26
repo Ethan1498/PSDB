@@ -19,7 +19,7 @@ if (isset($_GET["l"]) && !empty($_GET["l"])) {
     $result = mysqli_query($conn, $sql);
     if (mysqli_num_rows($result)>0){
         $res_arr=array();
-        $res_arr["Results"]=array();
+        //$res_arr["Results"]=array();
         
         while($row = mysqli_fetch_array($result)){
             $id = $row["id"];
@@ -37,7 +37,7 @@ if (isset($_GET["l"]) && !empty($_GET["l"])) {
                 "oldPrice"=>$oldPrice, 
                 "console"=>$console
             );
-            array_push($res_arr["Results"], $res_item); 
+            array_push($res_arr, $res_item); 
         }
         echo json_encode($res_arr);
                         
